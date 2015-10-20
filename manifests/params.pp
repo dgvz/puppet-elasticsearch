@@ -165,15 +165,9 @@ class elasticsearch::params {
       $service_hasstatus  = true
       $service_pattern    = $service_name
       $defaults_location  = '/etc/default'
-      if versioncmp($::operatingsystemmajrelease, '8') >= 0 {
-        $init_template     = 'elasticsearch.systemd.erb'
-        $service_providers = 'systemd'
-        $pid_dir           = '/var/run/elasticsearch'
-      } else {
-        $init_template     = 'elasticsearch.Debian.erb'
-        $service_providers = [ 'init' ]
-        $pid_dir           = false
-      }
+      $init_template     = 'elasticsearch.Debian.erb'
+      $service_providers = [ 'init' ]
+      $pid_dir           = false
     }
     'Ubuntu': {
       $service_name       = 'elasticsearch'
