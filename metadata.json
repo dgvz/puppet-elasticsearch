@@ -9,10 +9,6 @@
   "project_page": "https://github.com/elastic/puppet-elasticsearch",
   "issues_url": "https://github.com/elastic/puppet-elasticsearch/issues",
   "dependencies": [
-    {
-      "name": "ceritsc/yum",
-      "version_requirement": ">= 0.9.6 < 1.0.0"
-    }
   ],
   "requirements": [
   ]
